@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Import fira sans font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;200;300;400;500;600;700&display=swap');
+
+
+.ContentWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ParticleCanvas {
+    height: 85vh;
+    opacity: 0.2!important;
+}
+
+a:hover{
+    font-size: 1em;
+}
+
+
+/* Make the background fade near the edges */
+.ProjectCard {
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    ;
+    max-width: 80%;
+    min-height: 40%;
+    border-radius: 10px;
+    margin: 10px;
+    z-index: 100;
+    align-self: top;
+}
+
+.ParticleCanvas {
+    height: 85vh;
+    opacity: 0.2;
+}
+
+.ProjectCard {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ProjectCard.show {
+    opacity: 1;
+}
+
+.ProjectCardTitle {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.ProjectImageHolder {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 180px;
+    max-height: 180px;
+    border-radius: 10px;
+    object-fit: cover; /* Add this line */
+}
+
+.GitHubLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 5%;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.GitHubLink>img {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+.GitHubLink>a {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.ProjectDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 5%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.ProjectDate>img{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+
+/* Use fira sans font */
+.ProjectDate>div{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.Description{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 7%;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.Description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+
+.Description > div{
+    margin-top:10px;
+}
+
+/* Add a margin to the last description div */
+.Description > div:last-child {
+    margin-bottom: 20px;
+}
+  
+  .Description.show {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 7%;
+    padding-right: 7%;
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 10px;
+    max-height: 1000px; /* Set a value larger than the expected height */
+    transition: max-height 0.3s;
+  }
+  
+  .Description.show.hidden {
+    max-height: 0; /* Instantly collapse the description div */
+    transition: max-height 0.3s;
+  }
+
+@media (min-width: 500px) {
+    .ParticleCanvas {
+        height: 85vh;
+        opacity: 0.2;
+    }
+    /* turn it into a grid with 3 columns */
+    .ContentWindow {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        margin-left: 10%;
+        align-items: flex-start;
+    }
+
+    .ProjectCard {
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+        ;
+        max-width: 100%;
+        min-height: 40%;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .ProjectCardTitle {
+        font-size: 2em;
+    }
+}

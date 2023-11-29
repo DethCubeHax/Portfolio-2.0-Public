@@ -1,0 +1,8 @@
+{
+    "title": "Arduino Smart Display",
+    "imageUrl": "SmartDisplay",
+    "date": "Mar 2021",
+    "gitHubLink": "https://github.com/DethCubeHax/Arduino_Smart_Display",
+    "tools": "C++, Arduino",
+    "description": "The `Smart_Display.ino` Arduino project is a multifunctional smart display that uses a DS3231 Real-Time Clock (RTC) module to display time and date on a TFT TouchScreen. This project is customizable, allowing users to switch time display modes, adjust alarms, and toggle logging. It supports multiple alarms and uses a buzzer for alerts. It can display temperature data, indicating potential use in weather monitoring. The system uses an SD card to render .bmp images on the screen for custom visuals. The project manages the power of the DS3231 RTC module directly from the Arduino, simplifying the wiring. It's a flexible Arduino system that can serve as an alarm clock, weather station, or a general-purpose display."
+}

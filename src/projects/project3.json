@@ -1,0 +1,8 @@
+{
+    "title": "Sudoku Game",
+    "imageUrl": "Sudoku",
+    "date": "Dec 2022",
+    "gitHubLink": "https://github.com/DethCubeHax/ENGG1340-Project",
+    "tools": "C++",
+    "description": "As part of a course project, I developed a sudoku game purely in C++. It features the ability to find unique boards every single time, where the player plays against the computer. Also features save and load options."
+}

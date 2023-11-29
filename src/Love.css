@@ -1,0 +1,106 @@
+.main-body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* Apply a circular gradient background */
+    background: radial-gradient(
+    circle,
+    rgba(255, 155, 155, 0.972) 0%,
+    rgba(255, 255, 255, 0.492) 100%
+    );
+    }
+
+.center-image{
+    width: 350px;
+    height: 350px;
+    margin-top: 20vh;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 3s;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 3s;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+  
+
+.fade-in-h3 {
+    opacity: 0;
+    animation: fade-in 13s forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 10s;
+  }
+  
+  .fade-in-h3 {
+    opacity: 1;
+    transition: opacity 10s;
+  }
+
+  .fade-in-h3 {
+    opacity: 0;
+    animation: fade-in 12s forwards;
+  }
+
+  .progress-bar-container {
+    width: 20%;
+    min-width: 400px;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+  
+  .additional-div{
+    margin-top: 40px;
+  }
+
+  .progress-bar {
+    height: 20px; 
+    background:rgba(255, 155, 155, 0.572);
+    border-radius: 10px;
+  }
+
+  .fades-in {
+    opacity: 0;
+    transition: opacity 2s ease-in; 
+  }
+  
+  .fades-in.fades-in {
+    transition: opacity 2s ease-in; 
+    opacity: 1;
+  }

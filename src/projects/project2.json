@@ -1,0 +1,8 @@
+{
+    "title": "Robotic Fish, BREED",
+    "imageUrl": "Fish",
+    "date": "Jun 2022 - Present",
+    "gitHubLink": "https://github.com/DethCubeHax/GPAID-Alpha-HKU",
+    "tools": "C++, ROS, Python, EasyEDA",
+    "description": "As the Embedded Systems Technical Lead of the Student Interest Group, BREED HKU, I worked alongside a team of talented engineers to develop our flagship robotic fish, holding the Guinness World Record for the fastest swimming fish in the world.\nI developed the code for the fish's fins and the main motor. I also devised an algorithm to optimize the turning by using the quadrature encoder on the motor to analyse the tail fin position, and use it directly to turn the fish, greatly improving turning efficacy.\nIn addition, I optimized the electrical systems by developing robust, drop-in PCBs for the mainboard and the controller. Currently, I am focusing on migrating the system away to a Raspberry Pi based system for integration of advanced sensors using ROS."
+}

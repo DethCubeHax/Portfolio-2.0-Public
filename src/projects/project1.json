@@ -1,0 +1,8 @@
+{
+    "title": "GPAid HKU Alpha",
+    "imageUrl": "GPAid",
+    "date": "Jan 2022 - Jun 2022",
+    "gitHubLink": "https://github.com/DethCubeHax/GPAID-Alpha-HKU",
+    "tools": "React, Node, Express, MongoDB",
+    "description": "A course selection app that suggests students courses to take based on the reviews of past course takers, as well as their grades. Built using the MERN stack,with React for the front-end, Node.js and Express for the back-end, and MongoDB for the database."
+}

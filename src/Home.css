@@ -1,0 +1,615 @@
+/*
+Import monteserrat font
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Disable selection, highlight and scrollbar */
+* {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+
+body {
+    display: block;
+    position: relative;
+    background-color: #1c204b;
+    min-width: 100%;
+    margin: 0;
+    z-index: -100;
+}
+
+.Home {
+    background-color: #1c204b;
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+    z-index: -100!important;
+}
+
+.Particles {
+    height: 85vh;
+    width: 100%;
+    opacity: 0.2;
+}
+
+/* Add a glow effect to anchor tags */
+/* using box-shadow */
+a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    box-shadow: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 4em;
+}
+
+/*
+    Header UI
+    Keep a 5% space to the left and right of the screen
+*/
+.HomeHeader {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    background-color: #1c204b;
+    color: white;
+    min-height: 10vh;
+    min-width: 100%;
+    z-index: 950!important;
+}
+
+
+
+.SpacerHeader {
+    margin-top: 115px;
+}
+
+.HomeHeaderTitle {
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.HomeHeaderTitleHolder {
+    flex: 1;
+    display: flex;
+}
+
+.HomeHeaderTitleHolder>div {
+    margin: 3px;
+    margin-top: 25px;
+}
+
+.HomeHeaderTitleFN {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.HomeHeaderTitleMN {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.HomeHeaderTitleLN {
+    color: #ff6f00;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.HomeHeaderTitleButtonPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Flow the flex from right to left */
+.HomeHeaderTitleButtonHolder {
+    position: absolute;
+    right: 0;
+    align-items: center;
+    align-self: center; 
+    z-index: 1000;
+}
+
+/*
+Align buttons to the right
+and line up on the bottom
+*/
+
+.HomeHeaderTitleButton {
+    margin-top: 18px;
+    height: 30px;
+    opacity: 0.6;
+    z-index: 1100;
+}
+
+/*
+    3x3 grid with the center being the main content
+    all other grids will have 5% of the screen, left right top and bottom
+    give it alternating colors to see the grid
+*/
+
+.CoreGrid {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+}
+
+.TypewriterText,
+.TypewriterTextSmall {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.TypeWriterTextSmall {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.TypewriterTextSmall {
+    margin: 0;
+    font-size: 1em;
+}
+
+
+.NavPanel {
+    position: fixed;
+    min-width: 80px;
+    height: 80px;
+    background-color: #595b78;
+    right: 40px;
+    top: calc(50% - 220px);
+    border-radius: 40px;
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+    z-index: 10000;
+    opacity: 1;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.NavPanel.loaded {
+    width: 80px;
+    height: 440px;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.PanelButtonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.NavPanelText {
+    transition: opacity 0.5s;
+    transition-delay: 1s; /* Add this line */
+    opacity: 0;
+  }
+  
+  .NavPanelText.text-loaded {
+    opacity: 1;
+  }
+.NavPanelButton {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #ffffff;
+    overflow: visible;
+    position: relative;
+}
+
+.NavPanelButton::before {
+    content: attr(alt);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #595b78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.NavPanelButton:hover::before {
+    transform: scaleX(1);
+}
+
+.NavPanel:hover {
+    width: 170px;
+    transition: width 0.5s ease;
+}
+
+.NavPanel:hover .NavPanelButton {
+    animation: none;
+}
+
+.NavPanel:hover .NavPanelButton:hover::before {
+    transform: scaleX(1);
+}
+
+.NavPanel:hover .PanelButtonContainer div {
+    display: block;
+    margin-top: 30px;
+    margin-left: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+.PanelButtonContainer div {
+    display: none;
+    margin-top: 5px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.PhotoFrame {
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 100;
+}
+
+.PhotoFrameImage {
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.PhotoFrameLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #1c204b;
+    transition: height 0.3s ease-in-out;
+}
+
+.Spacer {
+    margin-top: 50px;
+}
+
+.Skills {
+    opacity: 0;
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 50px;
+}
+
+.SkillsVisible {
+    display: flex;
+    opacity: 1;
+    margin-top: 50px;
+}
+
+.SkillIcon {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.Skills,
+.SkillsVisible>a {
+    flex: 1
+}
+canvas {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: -10;
+}
+
+.TypewriterTextSmall:hover{
+    font-size: 2em !important;
+}
+
+
+/* Define the slide down animation */
+@keyframes slide-down {
+    0% {
+      max-height: 0;
+    }
+    100% {
+      max-height: 500px; /* Adjust this value based on your terminal's height */
+    }
+  }
+  
+  /* Define the slide up animation */
+  @keyframes slide-up {
+    0% {
+      max-height: 500px; /* This should be the same value as in the slide-down animation */
+    }
+    100% {
+      max-height: 0;
+    }
+  }
+  
+  .terminal-container {
+    /* Other styles */
+    display: flex;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 50px!important;
+    overflow: hidden; /* Ensure content doesn't show when sliding up/down */
+    animation: slide-up 1s forwards; /* Apply the slide-up animation by default */
+  }
+  
+  .terminal-container.visible {
+    opacity: 1;
+    margin-top: 50px;
+    margin-bottom: 50px!important;
+    padding-bottom: 50px!important;
+    max-height: 500px; /* This should be the same value as in the animations */
+    animation: slide-down 1s forwards; /* Apply the slide-down animation when visible */
+  }
+  
+  .terminal-area {
+    flex: 4;
+  }
+  
+  .console-label {
+    font-family: 'Montserrat', sans-serif;
+
+    flex: 1;
+    align-self: flex-start; /* Vertically center the label */
+    text-align: left; /* Horizontally center the label */
+    padding: 10px;
+
+  }
+  
+  .console-label h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .console-label p {
+    font-size: 16px;
+  }
+
+/* Define the slide down animation */
+@keyframes slide-down {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 500px; /* Adjust this value based on your terminal's height */
+    }
+}
+
+/* Define the slide up animation */
+@keyframes slide-up {
+    0% {
+        max-height: 500px; /* This should be the same value as in the slide-down animation */
+    }
+    100% {
+        max-height: 0;
+    }
+}
+
+.terminal-container {
+    /* Other styles */
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 50px!important;
+    overflow: hidden; /* Ensure content doesn't show when sliding up/down */
+    animation: slide-up 1s forwards; /* Apply the slide-up animation by default */
+}
+
+.terminal-container.visible {
+    opacity: 1;
+    margin-top: 50px;
+    margin-bottom: 50px!important;
+    padding-bottom: 50px!important;
+    max-height: 500px; /* This should be the same value as in the animations */
+    animation: slide-down 1s forwards; /* Apply the slide-down animation when visible */
+}
+
+/* For smaller screens */
+@media screen and (max-width: 1280px) {
+    .terminal-container {
+        flex-direction: column-reverse; /* Change the flex direction to vertical */
+        margin-top: 0;
+    }
+
+    .terminal-container{
+        width: 100%;
+
+    }
+
+    .terminal-container.visible {
+        width: 90%!important;
+    }
+
+    .TypewriterTextSmallLast{
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
+    }
+}
+
+.terminal-area {
+    flex: 4;
+}
+
+.console-label {
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
+    align-self: flex-start; /* Vertically center the label */
+    text-align: left; /* Horizontally center the label */
+    padding: 10px;
+}
+
+.console-label h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.console-label p {
+    font-size: 16px;
+}
+@media screen and (min-width: 500px) {
+
+
+    .TypewriterText {
+        font-size: 2.5em;
+    }
+
+    .HomeHeaderTitleHolder>div {
+        margin: 6px;
+        margin-top: 25px;
+    }
+
+    .HomeHeaderTitleFN {
+        font-size: 3.5em;
+        font-weight: bold;
+    }
+
+    .HomeHeaderTitleMN {
+        font-size: 3.5em;
+        font-weight: normal;
+    }
+
+    .HomeHeaderTitleLN {
+        color: #ff6f00;
+        font-size: 3.5em;
+        font-weight: normal;
+    }
+
+    .TypewriterText {
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+
+    .TypewriterTextSmall {
+        font-size: 1.5em;
+    }
+
+    .PhotoFrame {
+        margin: 0% calc(42% - 150px);
+        width: 450px;
+        height: 450px;
+    }
+
+    .PhotoFrameImage {
+        max-height: 450px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .Skills {
+        opacity: 0;
+        display: flex;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 50px;
+        max-width: 60%;
+    }
+
+    .SkillsVisible {
+        display: flex;
+        opacity: 1;
+        margin-top: 50px;
+        max-width: 60%;
+        margin-left: 17%;
+    }
+
+    .TypewriterTextSmallLast {
+        font-size: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .TypewriterTextSmallLast:hover {
+        font-size: 2em;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .Skills.visible {
+        opacity: 1;
+    }
+
+    .SkillIcon {
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /*
+        Align div with the text in the center vertically and horizontally
+    */
+    .TypewriterTextSmallLast {
+        font-size: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
+        margin-right: 6%;
+    }
+
+    .PanelButtonContainer > div {
+        display: none;
+        margin-top: 5px;
+        margin-left: 15px;
+        color: white;
+    }
+}
+
+body>div>div {
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    z-index: -1000;
+}
