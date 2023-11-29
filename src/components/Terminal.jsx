@@ -102,7 +102,7 @@ const Terminal = () => {
               response = "I have 1 publication.";
               break;
             case 'blogs':
-              response = "I have 1 blog post.";
+              response = "I have 2 blog posts.";
               break;
             case 'contact':
               response = "My email is at nafisulislam2k2@gmail.com";

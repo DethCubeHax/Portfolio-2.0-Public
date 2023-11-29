@@ -176,6 +176,7 @@ and line up on the bottom
 
 
 .NavPanel {
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
     min-width: 80px;
     height: 80px;

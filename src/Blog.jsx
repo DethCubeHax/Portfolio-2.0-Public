@@ -12,10 +12,11 @@ import Sidebar from './Sidebar';
 
 // Import blog posts
 import blogPost1 from './blogpages/blogPost1.json';
+import blogPost2 from './blogpages/blogPost2.json';
 // import additional blog posts here...
 
 // Create an array of the blog posts
-const blogPosts = [blogPost1 /*, additional blog posts...*/];
+const blogPosts = [blogPost1, blogPost2 /*, additional blog posts...*/];
 
 const Research = () => {
     const canvasRef = useRef(null);
